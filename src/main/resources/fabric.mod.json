@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "prismauth",
+  "version": "${version}",
+  "name": "PrismAuth",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/prismauth/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "sh.cxl.prismauth.PrismAuth"
+    ],
+    "main": []
+  },
+  "mixins": [
+    "prismauth.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
