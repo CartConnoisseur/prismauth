@@ -76,9 +76,11 @@ jar {
 // configure the maven publication
 publishing {
     publications {
-        create("mavenJava", MavenPublication) {
+        release(MavenPublication) {
+            from components.findByName('release')
+            groupId = project.maven_group
             artifactId = project.archives_base_name
-            from components.java
+            version = project.mod_version
         }
     }
 
